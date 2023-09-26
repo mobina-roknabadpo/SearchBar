@@ -1,6 +1,6 @@
 import React from "react";
-import UndefinedSVG from "../SVGs/UndefinedSVG";
-import styles from "./Undefined.module.css";
+import UndefinedSVG from "../SVGs/UndefinedSVG.jsx";
+import styles from "./undefined.module.css";
 
 function Undefined() {
   return (
