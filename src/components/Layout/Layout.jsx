@@ -1,7 +1,7 @@
 import React from "react";
-import Header from "../header/Haeder";
+import Header from "../Header/Haeder.jsx";
 import layout from "./layout.module.css";
-import Filter from "../Filter/Filter";
+import Filter from "../Filter/Filter.jsx";
 function Layout({ children }) {
   return (
     <>

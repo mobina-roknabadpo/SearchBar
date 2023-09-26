@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import Layout from "./components/Layout/Layout";
-import SearchBar from "./components/SearchBar/SearchBar";
+import Layout from "./components/Layout/Layout.jsx";
+import SearchBar from "./components/SearchBar/SearchBar.jsx";
 const App = () => {
   const [text, setText] = useState("");
   const [cards, setCards] = useState([]);
