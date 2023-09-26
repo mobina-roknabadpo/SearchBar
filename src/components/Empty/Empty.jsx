@@ -1,5 +1,5 @@
 import React from "react";
-import EmptySVG from "../SVGs/EmptySVG";
+import EmptySVG from "../SVGs/EmptySVG.jsx";
 import styles from "./empty.module.css";
 
 function Empty() {
