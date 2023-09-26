@@ -16,15 +16,3 @@
   font-style: normal;
   font-weight: 400;
 }
-
-@media screen and (min-width: 1279px) and (max-width: 1919px) {
-  .container {
-    margin-top: 80px;
-  }
-}
-
-@media screen and (min-width: 1920px) {
-  .container {
-    margin-top: 80px;
-  }
-}
