@@ -2,7 +2,6 @@
   display: flex;
   flex-direction: column;
   gap: 5px;
-  width: 30%;
   margin-bottom: 20px;
 }
 
@@ -22,13 +21,11 @@ a img {
 @media screen and (min-width: 1279px) and (max-width: 1919px) {
   .container {
     margin-bottom: 24px;
-    width: 18%;
   }
 }
 
 @media screen and (min-width: 1920px) {
   .container {
     margin-bottom: 24px;
-    width: 18%;
   }
 }
