@@ -1,22 +1,23 @@
 import React, { useState } from "react";
 import Layout from "./components/Layout/Layout.jsx";
 import "./App.css";
-import SearchBar from "./components/SearchBar/SearchBar.jsx";
 import { useEffect } from "react";
 import axios from "axios";
 import Filter from "./components/Filter/Filter.jsx";
+import SearchBar from "./components/searchBar/SearchBar.jsx";
 const App = () => {
   const [search, setSearch] = useState("");
   const [cards, setCards] = useState([]);
-  const [type, setType] = useState("all");
+  const [select, setSelect] = useState([]);
   const [page, setPage] = useState(1);
 
   useEffect(() => {
     if (search.length > 0) {
       getMovies();
     }
-  }, [search]);
+  }, [search, select]);
 
+  let type = select.length === 0 || select.length === 2 ? "all" : select[0];
   console.log(search);
   async function getMovies() {
     await axios
@@ -34,7 +35,7 @@ const App = () => {
   return (
     <Layout cards={cards} search={search}>
       <div className="container">
-        <Filter />
+        <Filter select={select} setSelect={setSelect} />
         <SearchBar search={search} setSearch={setSearch} cards={cards} />
       </div>
     </Layout>
