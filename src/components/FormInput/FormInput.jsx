@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./formInput.module.css";
 import Empty from "../Empty/Empty.jsx";
 import { useState } from "react";
-function FormInput({ search, setSearch }) {
+function FormInput({ search, setSearch, setCards }) {
   const handleClose = () => {
     setCards([]);
     setSearch("");

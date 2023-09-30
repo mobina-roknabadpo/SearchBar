@@ -4,10 +4,10 @@ import FormInput from "../FormInput/FormInput.jsx";
 import ListCards from "../ListCards/ListCards.jsx";
 import Undefined from "../Undefined/Undefined.jsx";
 import Empty from "../Empty/Empty.jsx";
-function SearchBar({ search, setSearch, cards }) {
+function SearchBar({ search, setSearch, cards, setCards }) {
   return (
     <div className={styles.container}>
-      <FormInput search={search} setSearch={setSearch} />
+      <FormInput search={search} setSearch={setSearch} setCards={setCards} />
       {!!search.length && !cards.length && <Undefined />}
       {search === "" ? <Empty /> : <ListCards cards={cards} />}
     </div>
