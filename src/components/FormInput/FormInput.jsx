@@ -1,6 +1,12 @@
 import React from "react";
 import styles from "./formInput.module.css";
+import Empty from "../Empty/Empty.jsx";
+import { useState } from "react";
 function FormInput({ search, setSearch }) {
+  const handleClose = () => {
+    setCards([]);
+    setSearch("");
+  };
   return (
     <div className={styles.wrapper}>
       <div className={styles.container}>
@@ -15,6 +21,13 @@ function FormInput({ search, setSearch }) {
           className={styles.formInput}
           onChange={(e) => setSearch(e.target.value)}
         />
+        {!!search && (
+          <img
+            src="./assets/images/cross.png"
+            className={styles.close}
+            onClick={handleClose}
+          />
+        )}
       </div>
     </div>
   );
