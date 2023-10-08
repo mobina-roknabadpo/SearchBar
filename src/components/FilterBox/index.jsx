@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./style.module.css";
+import InputCheckBox from "../InputCheckBox/index.jsx";
 
 const FilterBox = ({ type, setType }) => {
   const handleChange = (e) => {
@@ -16,24 +17,20 @@ const FilterBox = ({ type, setType }) => {
       <div className={styles["filter-container"]}>
         <h2 className={styles.name}>فیلترها</h2>
         <div className={styles.option}>
-          <div className={styles.movie}>
-            <input
-              type="checkbox"
-              id="movie"
-              value="movie"
-              onChange={handleChange}
-            />
-            <label htmlFor="movie">فیلم</label>
-          </div>
-          <div className={styles.serial}>
-            <input
-              type="checkbox"
-              id="series"
-              value="series"
-              onChange={handleChange}
-            />
-            <label htmlFor="series">سریال </label>
-          </div>
+          <InputCheckBox
+            style={styles.movie}
+            id="movie"
+            value="movie"
+            handleChange={handleChange}
+            name="فیلم"
+          />
+          <InputCheckBox
+            style={styles.serial}
+            id="series"
+            value="series"
+            handleChange={handleChange}
+            name="سریال"
+          />
         </div>
       </div>
     </div>
