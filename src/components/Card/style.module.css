@@ -1,0 +1,31 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 20px;
+}
+
+a img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.title {
+  color: #fff;
+  line-height: 21px;
+  text-align: right;
+  font-size: 12px;
+  font-style: normal;
+}
+
+@media screen and (min-width: 1279px) and (max-width: 1919px) {
+  .container {
+    margin-bottom: 24px;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .container {
+    margin-bottom: 24px;
+  }
+}
