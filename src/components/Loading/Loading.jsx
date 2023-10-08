@@ -3,10 +3,9 @@ import styles from "./style.module.css";
 
 const Loading = () => {
   return (
-    // <div className={styles.loaderContainer}>
-    //   <div className={styles.spinner}></div>
-    // </div>
-    <div className={styles.loaderContainer}>is Loading...</div>
+    <div className={styles.loadingScreen}>
+      <div className={styles.loadingSpinner}></div>
+    </div>
   );
 };
 
