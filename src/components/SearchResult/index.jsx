@@ -8,7 +8,7 @@ const SearchResult = ({ data = [], handleScroll, hasMore }) => {
   if (!data.length) {
     return <QueryNotFound />;
   }
-  
+
   return (
     <InfiniteScroll
       dataLength={data.length}
@@ -22,6 +22,8 @@ const SearchResult = ({ data = [], handleScroll, hasMore }) => {
             name={card.name}
             imageUrl={card.imageURL}
             url={card.url}
+            id={card.id}
+            type={card.type}
           />
         ))}
       </div>
