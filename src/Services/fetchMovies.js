@@ -16,6 +16,7 @@ const getData = async (type = "all", page = 1, query) => {
               name: item.name,
               imageURL: item.image_url,
               url: item.url,
+              type: item.type
             }))
           : [],
         total,
