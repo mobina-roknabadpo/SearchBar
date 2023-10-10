@@ -7,15 +7,50 @@
 
 a img {
   width: 100%;
-  border-radius: 5px;
 }
 
 .title {
   color: #fff;
   line-height: 21px;
   text-align: right;
-  font-size: 12px;
+  font-size: 14px;
   font-style: normal;
+}
+
+.image {
+  position: relative;
+  width: 100%;
+}
+
+.detail {
+  position: absolute;
+  color: #fff;
+  top: 0;
+  bottom: 0;
+  opacity: 0;
+  transition: opacity 0.8s ease-in 0.5s;
+  background-color: rgb(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  padding: 0 0.7rem 2rem 0;
+  border-radius: 5px;
+}
+
+.detail div > span {
+  font-size: 14px;
+}
+
+.image:hover .detail {
+  opacity: 1;
+}
+
+.score {
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
 
 @media screen and (min-width: 1279px) and (max-width: 1919px) {
