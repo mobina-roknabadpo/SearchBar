@@ -1,21 +1,15 @@
 import React from "react";
 import styles from "./style.module.css";
-import axios from "axios";
 import { useState } from "react";
 import { FaHeart } from "react-icons/fa";
+import { getDetial } from "../../Services/fetchBriefPreview";
 
 const Card = ({ name, imageUrl, url, id, type }) => {
   const [brief, setBreif] = useState([]);
   const handleMouseOver = async () => {
-    await axios
-      .get(`https://www.namava.ir/api/v1.0/medias/${id}/brief-preview`)
-      .then((Response) => {
-        setBreif(Response.data.result);
-      })
-      .catch((err) => console.log(err));
+    setBreif(await getDetial(id));
   };
   const { hit, year } = brief;
-  console.log(hit, year, type);
   return (
     <div className={styles.container}>
       <a href={url} onMouseOver={handleMouseOver} className={styles.image}>
