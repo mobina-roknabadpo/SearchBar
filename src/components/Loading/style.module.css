@@ -26,11 +26,19 @@
   }
 }
 
+@media screen and (min-width: 1279px) and (max-width: 1919px) {
+  .loadingScreen{
+    margin-top: 22rem;
+  }
+}
+
+
 @media screen and (min-width: 1920px) {
   .loadingSpinner {
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
     border: 10px solid #f3f3f3;
     border-top: 10px solid #2d2d2d;
+    margin-top: 23rem;
   }
 }
