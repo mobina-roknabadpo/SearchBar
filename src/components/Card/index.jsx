@@ -3,13 +3,37 @@ import styles from "./style.module.css";
 import { useState } from "react";
 import { FaHeart } from "react-icons/fa";
 import { getDetial } from "../../Services/fetchBriefPreview";
+import { MdOutlineSubtitles } from "react-icons/md";
+import { BsFillMicFill } from "react-icons/bs";
 
 const Card = ({ name, imageUrl, url, id, type }) => {
-  const [brief, setBreif] = useState([]);
+  const [brief, setBrief] = useState({});
+
   const handleMouseOver = async () => {
-    setBreif(await getDetial(id));
+    const result = await getDetial(id);
+    setBrief(result);
   };
-  const { hit, year } = brief;
+  const { hit, year, imdb, hasPersianSubtitle, dubsType } = brief;
+  let dubsTypes = "";
+
+  switch (dubsType) {
+    case "ExclusiveDubs":
+      dubsTypes = (
+        <span>
+          <BsFillMicFill /> دوبله نماوا
+        </span>
+      );
+      break;
+    case "StudioDubs":
+      dubsTypes = (
+        <span>
+          <BsFillMicFill /> دوبله فارسی
+        </span>
+      );
+    default:
+      break;
+  }
+
   return (
     <div className={styles.container}>
       <a href={url} onMouseOver={handleMouseOver} className={styles.image}>
@@ -21,8 +45,25 @@ const Card = ({ name, imageUrl, url, id, type }) => {
           </div>
           <div className={styles.score}>
             <FaHeart />
-            <span>{hit}%</span>
+            <span>{hit > 0 && hit + "%"}</span>
           </div>
+          <div className={styles.rate}>
+            {imdb && (
+              <span>
+                <strong> IMDB </strong>
+                {imdb}
+              </span>
+            )}
+          </div>
+          <div className={styles.hasPersianSubtitle}>
+            {hasPersianSubtitle && (
+              <div>
+                <MdOutlineSubtitles className={styles.iconSubTitle} />
+                <span>زیر نویس</span>
+              </div>
+            )}
+          </div>
+          <div className={styles.dubsType}>{dubsTypes}</div>
         </div>
       </a>
       <span className={styles.title}>{name}</span>
