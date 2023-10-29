@@ -19,6 +19,14 @@
   right: 20px;
 }
 
+.close {
+  position: absolute;
+  left: 20px;
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+}
+
 .formInput {
   width: 100%;
   height: 60px;

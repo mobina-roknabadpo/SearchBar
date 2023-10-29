@@ -6,6 +6,14 @@
   height: 1000px;
 }
 
+.resultContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
 @media screen and (min-width: 1280px) {
   .container {
     padding: 0 42px;

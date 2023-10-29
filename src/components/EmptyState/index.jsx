@@ -1,17 +1,17 @@
 import React from "react";
-import EmptySVG from "../SVGs/EmptySVG.jsx";
-import styles from "./empty.module.css";
+import styles from "./style.module.css";
+import EmptyStateIcon from "../Icons/EmptyState/index.jsx";
 
-function Empty() {
+const EmptyState = () => {
   return (
     <div className={styles.container}>
-      <EmptySVG />
+      <EmptyStateIcon />
       <p className={styles.paragraph}>
         عنوان فیلم، سریال یا بازیگر مورد نظر خود را جستجو کنید و یا از طریق
         فیلتر‌های موجود، فیلم و سریال مورد علاقه خود را پیدا کنید.
       </p>
     </div>
   );
-}
+};
 
-export default Empty;
+export default EmptyState;

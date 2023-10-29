@@ -1,6 +1,6 @@
 import React from "react";
 
-function UndefinedSVG() {
+const QueryNotFoundIcon = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -47,6 +47,6 @@ function UndefinedSVG() {
       />
     </svg>
   );
-}
+};
 
-export default UndefinedSVG;
+export default QueryNotFoundIcon;
